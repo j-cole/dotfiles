@@ -1,0 +1,9 @@
+[user]
+	name = Jon Cole
+	email = je_cole@hotmail.co.uk
+[diff]
+	tool = gvimdiff
+[merge]
+	tool = gvimdiff
+[color]
+	ui = true
