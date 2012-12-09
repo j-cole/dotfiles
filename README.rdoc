@@ -1,11 +1,11 @@
 === Jon Cole's dot files
 
-Collection of main config files for a system so that I can easily get the same set-up.
+Collection of main config files for a system so that I can easily get the same set-up again.
 
 Installation via rake was inspired by Ben Orenstein (github: r00k).
 
 == Installation
 
-  git clone git://github.com/r00k/dotfiles ~/.dotfiles
+  git clone https://github.com/j-cole/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
   rake install
