@@ -8,7 +8,7 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gd='git difftool'
 alias gdc='git difftool --cached'
-alias gst='git status'
+alias gst='git status -sb'
 
 # Tmux
 alias t='tmux -2'
