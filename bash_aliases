@@ -1,3 +1,5 @@
+# ~/.bash_aliases
+
 # Vim
 alias g='gvim --remote-silent'
 
