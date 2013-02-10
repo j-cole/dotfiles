@@ -7,3 +7,5 @@
 	tool = gvimdiff
 [color]
 	ui = true
+[push]
+	default = simple
