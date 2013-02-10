@@ -11,5 +11,8 @@ alias gdc='git difftool --cached'
 alias gf='git fetch'
 alias gst='git status -sb'
 
+# Ls
+alias ls='ls --color=auto'
+
 # Tmux
 alias t='tmux -2'
