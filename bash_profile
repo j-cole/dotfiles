@@ -1,5 +1,5 @@
 # Source .bashrc for login shells too
-case $- in *i*) . ~/.bashrc;; esac
+[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Prevent RVM from always loading in tmux (as tmux always opens login shells)
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
