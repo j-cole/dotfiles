@@ -37,7 +37,7 @@ colorscheme wombat256
 " Remove toolbar
 set guioptions-=T
 
-set guifont=Inconsolata\ 13
+set guifont=Inconsolata\ 10
 " set guifont=Triskweline_10:h10
 " set guifont=Monospace\ 12
 
