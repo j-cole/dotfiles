@@ -51,3 +51,6 @@ set shiftwidth=2
 
 " Prevents delay when pressing esc in insert mode
 set ttimeoutlen=1
+
+set colorcolumn=80
+set nowrap
