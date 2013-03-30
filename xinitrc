@@ -6,6 +6,9 @@
 # Load custom keymap
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
+# Load xprofile (mouse settings)
+[[ -f ~/.xprofile ]] && . ~/.xprofile
+
 # Run systemd as user instance
 systemd --user &
 
