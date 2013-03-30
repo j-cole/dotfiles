@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.bash_profile
 
 # Source .bashrc for login shells too
