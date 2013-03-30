@@ -1,9 +1,9 @@
 # ~/.bash_aliases
 
-# Vim
+# vim
 alias g='gvim --remote-silent'
 
-# Git
+# git
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
@@ -13,8 +13,14 @@ alias gdc='git difftool --cached'
 alias gf='git fetch'
 alias gst='git status -sb'
 
-# Ls
+# ls
 alias ls='ls --color=auto'
 
-# Tmux
+# pacman
+alias pacman='pacman-color'
+
+# skype
+alias skype='xhost +local: && su skype -c skype'
+
+# tmux
 alias t='tmux -2'
