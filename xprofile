@@ -1,0 +1,3 @@
+# ~/.xprofile
+
+xinput --set-prop 'Razer  Razer Abyssus' 'Device Accel Constant Deceleration' 3
