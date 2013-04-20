@@ -16,3 +16,7 @@ set -o vi
 
 # Set environment variables
 export EDITOR=vim
+
+# Add RVM to PATH for scripting and RVM bash completion
+PATH=$PATH:$HOME/.rvm/bin
+[[ -r ~/.rvm/scripts/completion ]] && . ~/.rvm/scripts/completion
