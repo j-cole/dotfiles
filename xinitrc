@@ -9,5 +9,8 @@
 # Load xprofile (mouse settings)
 [[ -f ~/.xprofile ]] && . ~/.xprofile
 
+# Run systemd as user instance
+systemd --user &
+
 # Start awesome
 exec awesome
