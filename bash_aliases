@@ -1,9 +1,10 @@
 # ~/.bash_aliases
 
-# Vim
-alias g='gvim --remote-silent'
+# arch
+alias po='sudo systemctl poweroff'
+alias rb='sudo systemctl reboot'
 
-# Git
+# git
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
@@ -13,8 +14,15 @@ alias gdc='git difftool --cached'
 alias gf='git fetch'
 alias gst='git status -sb'
 
-# Ls
+# ls
+alias l='ls -al'
 alias ls='ls --color=auto'
 
-# Tmux
+# skype
+alias skype='xhost +local: && su skype -c skype'
+
+# tmux
 alias t='tmux -2'
+
+# vim
+alias g='gvim --remote-silent'
