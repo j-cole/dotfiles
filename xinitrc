@@ -10,7 +10,7 @@
 [[ -f ~/.xprofile ]] && . ~/.xprofile
 
 # Run systemd as user instance
-systemd --user &
+/usr/lib/systemd/systemd --user &
 
 # Start awesome
 exec awesome
