@@ -1,6 +1,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Add pathogen
+"execute pathogen#infect()
+
 " Enable mouse in terminal
 set mouse=a
 
@@ -32,8 +35,8 @@ filetype plugin indent on
 set t_Co=256
 
 colorscheme vividchalk
-" colorscheme wombat256
-" colorscheme desert
+"colorscheme wombat256
+"colorscheme desert
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -55,5 +58,30 @@ set nowrap
 " set noswapfile
 " set viminfo+=n$VIM/_viminfo
 
-" Stop beeping
+" stop beeping
 set visualbell
+
+let mapleader = ','
+" Buffers
+nnoremap gb :ls<CR>:b<Space>
+
+
+nnoremap <leader>i :set list!<cr>
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap * *<c-o>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+nnoremap K :q<cr>
+
+nnoremap <leader>h ^
+nnoremap <leader>l $
+
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+set textwidth=80
+
+nnoremap Y y$
