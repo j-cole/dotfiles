@@ -1,0 +1,4 @@
+set window playlist
+set windows library, playlist
+set ignorecase
+set smartcase
