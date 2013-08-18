@@ -18,7 +18,7 @@ set showcmd
 " Switch syntax highlighting on
 syntax on
 
-" Switch on highlighting the last used search pattern and do incremental searching
+" Highlight the last used search pattern and enable incremental searching
 set hlsearch
 set incsearch
 
@@ -31,15 +31,9 @@ filetype plugin indent on
 " Force terminal to use 256 colors
 set t_Co=256
 
-colorscheme wombat256
+colorscheme vividchalk
+" colorscheme wombat256
 " colorscheme desert
-
-" Remove toolbar
-set guioptions-=T
-
-set guifont=Inconsolata\ 10
-" set guifont=Triskweline_10:h10
-" set guifont=Monospace\ 12
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -54,3 +48,12 @@ set ttimeoutlen=1
 
 set colorcolumn=80
 set nowrap
+
+" Portable stuff
+" set nobackup
+" set nowritebackup
+" set noswapfile
+" set viminfo+=n$VIM/_viminfo
+
+" Stop beeping
+set visualbell
