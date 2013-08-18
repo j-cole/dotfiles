@@ -1,5 +1,9 @@
 # ~/.bash_aliases
 
+# android
+alias android-connect='mkdir ~/mtp && jmtpfs ~/mtp'
+alias android-disconnect='fusermount -u ~/mtp && rmdir ~/mtp'
+
 # arch
 alias po='sudo systemctl poweroff'
 alias rb='sudo systemctl reboot'
