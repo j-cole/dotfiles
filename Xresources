@@ -1,7 +1,9 @@
 URxvt*.termName: rxvt-unicode
 URxvt*.loginShell: true
 
-URxvt*.font: xft:Inconsolata:size=14:antialias=true,xft:AR PL UMing CN:size=15:antialias=true
+URxvt*.font: xft:Inconsolata:size=14:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+URxvt*.ingeritPixmap: true
+URxvt*.xftAnitalias: true
 URxvt*.cursorBlink: false
 URxvt*.buffered: true
 !URxvt*.depth: 32
@@ -38,8 +40,11 @@ URxvt*.color10: #7B996C
 URxvt*.color3:  #7C5618
 URxvt*.color11: #B38849
 !blue
-URxvt*.color4:  #566060
-URxvt*.color12: #889393
+!URxvt*.color4:  #566060
+!URxvt*.color12: #889393
+!URxvt*.color12: #79D7D7
+URxvt*.color4:  #327979
+URxvt*.color12: #66BFBF
 !magenta
 URxvt*.color5:  #8E4948
 URxvt*.color13: #C67C78
