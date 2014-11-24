@@ -56,6 +56,9 @@ require "binds"
 -- Optional user script loading --
 ----------------------------------
 
+-- Add plugins directory
+require "plugins"
+
 require "webinspector"
 
 -- Add sqlite3 cookiejar

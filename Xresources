@@ -1,7 +1,11 @@
-URxvt*.termName: rxvt-unicode
+URxvt*.termName: screen-256color
 URxvt*.loginShell: true
 
-URxvt*.font: xft:Inconsolata:size=14:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!URxvt*.font: xft:tewi-r-normal:size=14:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!URxvt*.font: xft:Inconsolata:size=10:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!URxvt*.font: xft:Tewi-normal-11:size=14:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!URxvt*.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso8859-1
+URxvt*.font: xft:Terminus:size=10:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
 URxvt*.ingeritPixmap: true
 URxvt*.xftAnitalias: true
 URxvt*.cursorBlink: false
@@ -58,3 +62,13 @@ URxvt*.color15: #C6C6C6
 urxvt*.background: 0
 urxvt*.foreground: 15
 URxvt*.underlineColor: yellow
+
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*geometry: 240*84
+
+!general font stuff
+!Xft.hinting: 1
+!Xft.hintstyle: hintfull
+!Xft.antialias: 0
+Xft.dpi: 96

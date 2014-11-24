@@ -19,7 +19,8 @@ globals = {
 local _, arch = luakit.spawn_sync("uname -sm")
 -- Only use the luakit version if in date format (reduces identifiability)
 local lkv = string.match(luakit.version, "^(%d+.%d+.%d+)")
-globals.useragent = string.format("Mozilla/5.0 (%s) AppleWebKit/%s+ (KHTML, like Gecko) WebKitGTK+/%s luakit%s",
+--globals.useragent = string.format("Mozilla/5.0 (%s) AppleWebKit/%s+ (KHTML, like Gecko) WebKitGTK+/%s luakit%s",
+globals.useragent = string.format("Mozilla/5.0 (X11; %s) AppleWebKit/%s+ (KHTML, like Gecko) WebKitGTK+/%s Chrome/31.0.1650.63 luakit%s",
     string.sub(arch, 1, -2), luakit.webkit_user_agent_version,
     luakit.webkit_version, (lkv and ("/" .. lkv)) or "")
 
@@ -69,7 +70,8 @@ search_engines.default = search_engines.google
 
 -- Per-domain webview properties
 -- See http://webkitgtk.org/reference/webkitgtk/stable/WebKitWebSettings.html
-domain_props = { --[[
+domain_props = {
+    --[[
     ["all"] = {
         enable_scripts          = false,
         enable_plugins          = false,
@@ -83,7 +85,8 @@ domain_props = { --[[
     ["bbs.archlinux.org"] = {
         user_stylesheet_uri     = "file://" .. luakit.data_dir .. "/styles/dark.css",
         enable_private_browsing = true,
-    }, ]]
+    },
+    ]]
 }
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80

@@ -51,6 +51,7 @@ set ttimeoutlen=1
 
 set colorcolumn=80
 set nowrap
+set list
 
 " Portable stuff
 " set nobackup

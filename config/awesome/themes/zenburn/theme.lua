@@ -12,7 +12,10 @@ theme.wallpaper = "/usr/share/awesome/themes/zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "sans 8"
+theme.font      = "Terminus 8"
+--theme.font      = "Tewi 8"
+--theme.font      = "sans 11"
+--theme.font      = "Tewi-normal-11 11"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"

@@ -86,8 +86,8 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     -- tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
-    tags[s] = awful.tag({ "| alpha |", "| beta |", "| gamma |", "| delta |", 
-                          "| epsilon |", "| zeta |", "| eta |", "| theta |"},
+    tags[s] = awful.tag({ "|alpha|", "|beta|", "|gamma|", "|delta|", 
+                          "|epsilon|", "|zeta|", "|eta|", "|theta|"},
                           s, layouts[1])
 end
 -- }}}
@@ -444,4 +444,7 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-awesome.font = "ttf-inconsolata 9"
+--awesome.font = "Sans 11"
+--awesome.font = "ttf-inconsolata 9"
+--awesome.font = "Tewi 8"
+awesome.font = "Terminus 12"

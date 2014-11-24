@@ -9,7 +9,8 @@ set guioptions-=r
 set guioptions-=L
 
 " set font
-set guifont=Inconsolata\ 10
+set guifont=Terminus\ 10
+"set guifont=Inconsolata\ 10
 "set guifont=Triskweline_10:h10
 "set guifont=Monospace\ 12
 " for windows:

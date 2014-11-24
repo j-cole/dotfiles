@@ -4,7 +4,8 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Load custom keymap
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+#[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+setxkbmap -option caps:escape
 
 # Load xprofile (mouse settings)
 [[ -f ~/.xprofile ]] && . ~/.xprofile
@@ -13,4 +14,7 @@
 /usr/lib/systemd/systemd --user &
 
 # Start awesome
-exec awesome
+exec cinnamon-session
+#exec awesome
+# For awesome logging:
+#exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr

@@ -219,9 +219,9 @@ input {
 #}
 audio_output {
 	type		"alsa"
-  name		"My ALSA Device"
-	device		"hw:0,0"	# optional
-	format		"44100:16:2"	# optional
+  name		"my ALSA device"
+#device		"hw:0,0"	# optional
+#format		"44100:16:2"	# optional
   mixer_type    "software"  # optional
 }
 #
