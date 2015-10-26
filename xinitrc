@@ -5,16 +5,21 @@
 
 # Load custom keymap
 #[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
-setxkbmap -option caps:escape
+setxkbmap -variant dvp -option caps:escape
 
 # Load xprofile (mouse settings)
 [[ -f ~/.xprofile ]] && . ~/.xprofile
+
+# set environment for fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # Run systemd as user instance
 /usr/lib/systemd/systemd --user &
 
 # Start awesome
-exec cinnamon-session
-#exec awesome
+#exec cinnamon-session
+exec awesome
 # For awesome logging:
 #exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
