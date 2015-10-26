@@ -5,7 +5,9 @@ URxvt*.loginShell: true
 !URxvt*.font: xft:Inconsolata:size=10:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
 !URxvt*.font: xft:Tewi-normal-11:size=14:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
 !URxvt*.font: -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso8859-1
-URxvt*.font: xft:Terminus:size=10:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!URxvt*.font: xft:Terminus:size=10:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
+!laptop setting:
+URxvt*.font: xft:Terminus:size=12:hinting=true:hintstyle=hintslight,xft:AR PL UMing CN:size=15
 URxvt*.ingeritPixmap: true
 URxvt*.xftAnitalias: true
 URxvt*.cursorBlink: false
