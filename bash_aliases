@@ -25,11 +25,16 @@ alias grep='grep --color'
 alias l='ls -al'
 alias ls='ls --color=auto'
 
+# monitor
+alias monmax='sudo tee /sys/class/backlight/intel_backlight/brightness <<< 800'
+alias monmin='sudo tee /sys/class/backlight/intel_backlight/brightness <<< 250'
+
 # skype
 alias skype='xhost +local: && su skype -c skype'
 
 # system
 alias cp='cp -i'
+alias batt='cat /sys/class/power_supply/BAT0/capacity'
 
 # tmux
 alias t='tmux -2'
