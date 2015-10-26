@@ -20,3 +20,4 @@ export EDITOR=vim
 # Add RVM to PATH for scripting and RVM bash completion
 PATH=$PATH:$HOME/.rvm/bin
 [[ -r ~/.rvm/scripts/completion ]] && . ~/.rvm/scripts/completion
+PATH=$PATH:$HOME/.gem/ruby/2.2.0/bin
