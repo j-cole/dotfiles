@@ -57,7 +57,6 @@ modkey = "Mod1"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -68,7 +67,8 @@ local layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.floating
 }
 -- }}}
 
@@ -96,7 +96,8 @@ end
 -- Create a laucher widget and a main menu
 internetmenu = {
   { "luakit", "luakit"},
-  { "chromium", "chromium"}
+  { "chromium", "chromium"},
+  { "firefox", "firefox"}
 }
 appmenu = {
   { "spacefm", "spacefm" },
@@ -129,6 +130,37 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
+
+-- create monitor widgets
+cpu_monitor = wibox.widget.textbox()
+cpu_monitor:set_text("CPU ### ")
+bat_monitor = wibox.widget.textbox()
+local function bat_monitor_update()
+    local f_capacity = assert(io.open("/sys/class/power_supply/BAT0/capacity", "r"))
+    local f_status = assert(io.open("/sys/class/power_supply/BAT0/status", "r"))
+    local bat_capacity = tonumber(f_capacity:read("*all"))
+    local bat_status = f_status:read("*all")
+
+    local bat_color = ""
+    if (bat_capacity <= 10) then
+      bat_color = "red"
+    else
+      bat_color = "white"
+    end
+    if (bat_status == "Charging\n") then
+      bat_monitor:set_markup('<span color="' .. bat_color .. '">' ..
+                                'PLUG ' .. bat_capacity .. ' ' ..
+                              '</span>')
+    else
+      bat_monitor:set_markup('<span color="' .. bat_color .. '">' ..
+                                'BATT ' .. bat_capacity .. ' ' ..
+                              '</span>')
+    end
+end
+bat_monitor_update()
+bat_timer = timer({timeout = 60})
+bat_timer:connect_signal("timeout", bat_monitor_update)
+bat_timer:start()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -207,6 +239,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(cpu_monitor)
+    right_layout:add(bat_monitor)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -444,7 +478,35 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
 --awesome.font = "Sans 11"
 --awesome.font = "ttf-inconsolata 9"
 --awesome.font = "Tewi 8"
 awesome.font = "Terminus 12"
+
+-- battery warning
+local function trim(s)
+    return s:find'^%s*$' and '' or s:match'^%s*(.*%S)'
+end
+
+local function bat_notification()
+    local f_capacity = assert(io.open("/sys/class/power_supply/BAT0/capacity", "r"))
+    local f_status = assert(io.open("/sys/class/power_supply/BAT0/status", "r"))
+    local bat_capacity = tonumber(f_capacity:read("*all"))
+    local bat_status = trim(f_status:read("*all"))
+
+    if (bat_capacity <= 10 and bat_status == "Discharging") then
+        naughty.notify({ title = "Battery Warning"
+            , text       = "Battery low! " .. bat_capacity .."%" .. " left!"
+            , fg="#ffffff"
+            , bg="#C91C1C"
+            , timeout    = 15
+            , position   = "bottom_right"
+        })
+    end
+end
+
+battimer = timer({timeout = 60})
+battimer:connect_signal("timeout", bat_notification)
+battimer:start()
+-- end here for battery warning
