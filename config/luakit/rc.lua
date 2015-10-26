@@ -57,7 +57,7 @@ require "binds"
 ----------------------------------
 
 -- Add plugins directory
-require "plugins"
+-- require "plugins"
 
 require "webinspector"
 
