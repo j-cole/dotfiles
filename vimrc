@@ -1,11 +1,13 @@
 set nocompatible
 
 " Vundle init
+" run :PluginInstall or vim +PluginInstall +qall after changing
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'elixir-lang/vim-elixir'
 call vundle#end()
 filetype plugin indent on
 
@@ -94,3 +96,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 set textwidth=80
 
 nnoremap Y y$
+
+set relativenumber
+
