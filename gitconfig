@@ -2,7 +2,7 @@
 	name = Jon Cole
 	email = je_cole@hotmail.co.uk
 [diff]
-	tool = gvimdiff
+	tool = vimdiff
 [merge]
 	tool = gvimdiff
 [color]
