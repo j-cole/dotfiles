@@ -5,7 +5,7 @@
 
 # Load custom keymap
 #[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
-setxkbmap -variant dvp -option caps:escape
+setxkbmap -variant dvp -option caps:escape,compose:ralt
 
 # Load xprofile (mouse settings)
 [[ -f ~/.xprofile ]] && . ~/.xprofile
