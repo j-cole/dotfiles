@@ -1,1 +1,8 @@
+config/composer
+config/dconf
+config/htop
+config/pulse
+config/unity3d
+
 vim/.netrwhist
+vim/bundle
