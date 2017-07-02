@@ -2,6 +2,10 @@ config/composer
 config/dconf
 config/htop
 config/pulse
+config/ranger/bookmarks
+config/ranger/commands_full.py
+config/ranger/history
+config/ranger/tagged
 config/Slack
 config/spotify
 config/unity3d
