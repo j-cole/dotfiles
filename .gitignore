@@ -1,5 +1,8 @@
+config/Android Open Source Project
 config/composer
 config/dconf
+config/filezilla
+config/gtk-2.0
 config/htop
 config/pulse
 config/ranger/bookmarks
