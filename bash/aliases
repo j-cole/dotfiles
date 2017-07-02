@@ -5,8 +5,14 @@ alias android-connect='mkdir ~/mtp && jmtpfs ~/mtp'
 alias android-disconnect='fusermount -u ~/mtp && rmdir ~/mtp'
 
 # arch
-alias po='sudo systemctl poweroff'
-alias rb='sudo systemctl reboot'
+alias po='poweroff'
+alias rb='reboot'
+
+# bash
+alias edit-bash-aliases='vim ~/.bash/aliases'
+alias edit-bash-config='vim ~/.bash/config'
+alias edit-bash-env='vim ~/.bash/env'
+alias edit-bashrc='vim ~/.bashrc'
 
 # git
 alias ga='git add'
@@ -22,7 +28,7 @@ alias gst='git status -sb'
 alias grep='grep --color'
 
 # ls
-alias l='ls -al'
+alias ll='ls -al'
 alias ls='ls --color=auto'
 
 # monitor
@@ -40,4 +46,4 @@ alias batt='cat /sys/class/power_supply/BAT0/capacity'
 alias t='tmux -2'
 
 # vim
-alias g='gvim --remote-silent'
+alias gv='gvim --remote-silent'

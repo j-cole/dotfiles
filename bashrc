@@ -8,8 +8,12 @@
 # Set bash to vi mode
 set -o vi
 
+shopt -s histverify
+
 # Load ~/.bash_aliases
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bash/aliases ]] && . ~/.bash/aliases
+[[ -f ~/.bash/config ]] && . ~/.bash/config
+[[ -f ~/.bash/env ]] && . ~/.bash/env
 
 # Set environment variables
 export EDITOR=vim
