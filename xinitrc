@@ -19,7 +19,8 @@ export XMODIFIERS=@im=fcitx
 /usr/lib/systemd/systemd --user &
 
 # Start awesome
-#exec cinnamon-session
 exec awesome
+#exec dwm
+#exec i3
 # For awesome logging:
 #exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
