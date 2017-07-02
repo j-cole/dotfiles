@@ -5,4 +5,5 @@ config/pulse
 config/unity3d
 
 vim/.netrwhist
-vim/bundle
+vim/autoload/plug.vim
+vim/plugged

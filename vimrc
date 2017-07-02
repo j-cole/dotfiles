@@ -1,18 +1,14 @@
 set nocompatible
 
-" Vundle init
-" run :PluginInstall or vim +PluginInstall +qall after changing
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'elixir-lang/vim-elixir'
-call vundle#end()
-filetype plugin indent on
+" Plug init
+" run :PlugInstall to install listed plugins
+call plug#begin('~/.vim/plugged')
+Plug 'elixir-lang/vim-elixir'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-fugitive'
+call plug#end()
 
-" Add pathogen
-"execute pathogen#infect()
+filetype plugin indent on
 
 " Enable mouse in terminal
 set mouse=a
