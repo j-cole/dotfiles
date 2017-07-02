@@ -5,7 +5,24 @@
 	tool = vimdiff
 [merge]
 	tool = gvimdiff
+	ff = only
 [color]
 	ui = true
 [push]
-	default = simple
+	default = upstream
+[alias]
+	aa = add --all
+	b = branch
+	car = commit --amend --no-edit
+	co = checkout
+	dc = diff --word-diff --cached --color-words
+	df = diff --word-diff --color-words
+	mup = !git checkout master && git pull && git checkout -
+	glog = log -E -i --grep
+	sl = log --oneline --decorate --graph -20
+	sla = log --oneline --decorate --graph --all -20
+	uncommit = reset --soft HEAD^
+	unstage = reset
+[fetch]
+	prune = true
+
