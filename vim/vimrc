@@ -13,3 +13,5 @@ endfunction
 call plug#begin('~/.vim/plugged')
 call s:SourceConfigs()
 call plug#end()
+
+" vim:ft=vim
