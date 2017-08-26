@@ -11,9 +11,9 @@ set -o vi
 shopt -s histverify
 
 # Load bash config stuff
-[[ -f ~/.bash/aliases ]] && . ~/.bash/aliases
-[[ -f ~/.bash/config ]] && . ~/.bash/config
-[[ -f ~/.bash/env ]] && . ~/.bash/env
+[[ -f ~/.bash/configs/aliases ]] && . ~/.bash/configs/aliases
+[[ -f ~/.bash/configs/config ]] && . ~/.bash/configs/config
+[[ -f ~/.bash/configs/env ]] && . ~/.bash/configs/env
 
 # Set environment variables
 export EDITOR=vim
