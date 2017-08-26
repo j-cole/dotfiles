@@ -10,7 +10,7 @@ set -o vi
 
 shopt -s histverify
 
-# Load ~/.bash_aliases
+# Load bash config stuff
 [[ -f ~/.bash/aliases ]] && . ~/.bash/aliases
 [[ -f ~/.bash/config ]] && . ~/.bash/config
 [[ -f ~/.bash/env ]] && . ~/.bash/env
@@ -84,3 +84,5 @@ export PS1="\
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #source /usr/share/nvm/init-nvm.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
