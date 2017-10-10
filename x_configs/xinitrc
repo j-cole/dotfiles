@@ -18,9 +18,5 @@ export XMODIFIERS=@im=fcitx
 # Run systemd as user instance
 /usr/lib/systemd/systemd --user &
 
-# Start awesome
-exec awesome
-#exec dwm
-#exec i3
-# For awesome logging:
-#exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
+~/bin/dwm_status &
+exec dwm 2> /tmp/dwm.log
