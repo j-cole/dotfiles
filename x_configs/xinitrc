@@ -18,5 +18,7 @@ export XMODIFIERS=@im=fcitx
 # Run systemd as user instance
 /usr/lib/systemd/systemd --user &
 
+systemctl --user import-environment DISPLAY
+
 ~/bin/dwm_status &
 exec dwm 2> /tmp/dwm.log
