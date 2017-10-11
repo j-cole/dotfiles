@@ -29,7 +29,9 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Slack",    NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 6,       1,           -1 },
+	{ "Gimp",     NULL,       NULL,       0,            1,           -1 }
 };
 
 /* layout(s) */
@@ -66,6 +68,9 @@ static const char *termcmd[]    = { "st", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = steamcmd } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = spotifycmd } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
