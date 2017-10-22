@@ -20,5 +20,6 @@ export XMODIFIERS=@im=fcitx
 
 systemctl --user import-environment DISPLAY
 
-~/bin/dwm_status &
+#~/bin/dwm_status &
+slstatus &
 exec dwm 2> /tmp/dwm.log
