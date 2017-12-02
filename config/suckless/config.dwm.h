@@ -63,7 +63,7 @@ static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufon
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
 static const char *steamcmd[]   = { "steam", NULL };
-static const char *termcmd[]    = { "st", NULL };
+static const char *termcmd[]    = { "st", "-e", "tmux", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
