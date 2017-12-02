@@ -15,6 +15,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
+# show intellij correctly in dwm
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Run systemd as user instance
 /usr/lib/systemd/systemd --user &
 
