@@ -77,7 +77,7 @@ export PS1="\
 \$(parse_git_dirty)${RESET}"
 
 # Load RVM into a shell session *as a function* and load completion
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
 # Add current ruby to prompt
 #PS1="\$($HOME/.rvm/bin/rvm-prompt) $PS1"
@@ -86,3 +86,6 @@ export PS1="\
 #source /usr/share/nvm/init-nvm.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# set pulseaudio value for steam game
+export PULSE_RUNTIME_PATH=$XDG_RUNTIME_DIR/pulse
