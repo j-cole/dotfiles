@@ -1,0 +1,10 @@
+#!/bin/bash
+# No arguments: enter normal git editor
+# With arguments: do direct 'commit -m'
+
+if [[ $# > 0 ]]; then
+  git commit -m "$@"
+else
+  git commit -v
+fi
+
