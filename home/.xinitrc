@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Load urxvt settings
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+#[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Load custom keymap
 #[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 setxkbmap -variant dvp -option caps:escape,compose:ralt
 
 # Load xprofile (mouse settings)
-[[ -f ~/.xprofile ]] && . ~/.xprofile
+#[[ -f ~/.xprofile ]] && . ~/.xprofile
 
 # set environment for fcitx
 export GTK_IM_MODULE=fcitx
