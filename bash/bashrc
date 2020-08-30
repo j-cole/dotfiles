@@ -89,3 +89,4 @@ export PS1="\
 
 # set pulseaudio value for steam game
 export PULSE_RUNTIME_PATH=$XDG_RUNTIME_DIR/pulse
+export PATH=$HOME/.local/bin:$PATH
