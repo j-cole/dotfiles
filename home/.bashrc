@@ -10,10 +10,20 @@ set -o vi
 
 shopt -s histverify
 
-# Load bash config stuff
-[[ -f ~/.bash/configs/aliases ]] && . ~/.bash/configs/aliases
-[[ -f ~/.bash/configs/config ]] && . ~/.bash/configs/config
-[[ -f ~/.bash/configs/env ]] && . ~/.bash/configs/env
+# Load bash aliases
+[[ -f ~/.config/bash/aliases ]] && . ~/.config/bash/aliases
+
+# No arguments: 'git status'
+# With arguments: acts like 'git'
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+#complete -F g git
+
 
 # Set environment variables
 export EDITOR=vim
