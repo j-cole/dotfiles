@@ -11,6 +11,11 @@ export HISTFILE="$XDG_DATA_HOME/bash/history"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
+# env variables
+export PATH="$HOME/.local/bin:$PATH"
+# set pulseaudio value for steam game
+export PULSE_RUNTIME_PATH="$XDG_RUNTIME_DIR/pulse"
+
 # Source .bashrc for login shells too
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
