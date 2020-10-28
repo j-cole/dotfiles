@@ -3,26 +3,13 @@ set nocompatible
 let mapleader = ','
 
 call plug#begin('~/.vim/plugged')
-  " from ./rcfiles/elixir
   Plug 'elixir-lang/vim-elixir'
-
-  " from ./rcfiles/fugitive
-  Plug 'tpope/vim-fugitive'
-
-  " from ./rcfiles/fzf
   " fzf - command line fuzzy finder
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  nnoremap <C-p> :Files<cr>
-  nnoremap <leader>gd :Files ~/code/dotfiles<cr>
-
-  " from ./rcfiles/rust
   Plug 'rust-lang/rust.vim'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
-
-" from ./rcfiles/cleanup
-" This file contains configurations that still need to be moved to separate
-" config files to clean up vim configuration
 
 filetype plugin indent on
 
@@ -110,5 +97,9 @@ set textwidth=80
 nnoremap Y y$
 
 set relativenumber
+
+" fzf
+nnoremap <C-p> :Files<cr>
+nnoremap <leader>gd :Files ~/code/dotfiles<cr>
 
 " vim:ft=vim
