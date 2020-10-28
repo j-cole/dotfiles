@@ -3,6 +3,10 @@ set nocompatible
 let mapleader = ','
 
 call plug#begin('~/.vim/plugged')
+  Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
   Plug 'elixir-lang/vim-elixir'
   " fzf - command line fuzzy finder
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -101,5 +105,13 @@ set relativenumber
 " fzf
 nnoremap <C-p> :Files<cr>
 nnoremap <leader>gd :Files ~/code/dotfiles<cr>
+
+" languageclient-neovim
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rust-analyzer'],
+    \ }
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 " vim:ft=vim
