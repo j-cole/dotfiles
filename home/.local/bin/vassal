@@ -1,0 +1,5 @@
+#!/bin/bash
+# <= 3.5.3
+JDK_JAVA_OPTIONS=-Duser.home=$XDG_DATA_HOME /usr/bin/vassal
+# 3.5.3 <
+#JDK_JAVA_OPTIONS=-DVASSAL.conf=$XDG_DATA_HOME/VASSAL /usr/bin/vassal
