@@ -11,7 +11,7 @@ set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 
 let mapleader = ','
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$XDG_DATA_HOME/vim/plugged')
   Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
