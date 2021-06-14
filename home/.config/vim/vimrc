@@ -9,7 +9,7 @@ set undodir=$XDG_DATA_HOME/vim/undo
 set viewdir=$XDG_DATA_HOME/vim/view
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 
-let mapleader = ','
+let mapleader = ' '
 
 call plug#begin('$XDG_DATA_HOME/vim/plugged')
   Plug 'autozimu/LanguageClient-neovim', {
