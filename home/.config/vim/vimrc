@@ -16,8 +16,6 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-  Plug 'elixir-lang/vim-elixir'
-  " fzf - command line fuzzy finder
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
@@ -118,6 +116,7 @@ nnoremap <leader>gd :Files ~/code/dotfiles<cr>
 " languageclient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rust-analyzer'],
+    \ 'cpp': ['clangd', '-background-index',],
     \ }
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
