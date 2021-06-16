@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export EDITOR=vim
+
 # set XDG locations
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -24,7 +26,7 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export PULSE_RUNTIME_PATH="$XDG_RUNTIME_DIR/pulse"
 
 # env variables
-export PATH="$XDG_DATA_HOME/rvm/bin:$PATH"
+export PATH="$rvm_path/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Source .bashrc for login shells too

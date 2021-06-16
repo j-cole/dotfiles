@@ -22,13 +22,8 @@ function g {
     git status
   fi
 }
-#complete -F g git
 
-
-# Set environment variables
-export EDITOR=vim
-
-# Bash colours
+# Bash colours for prompt
    RED="\001$(tput setaf 1)\002"
  GREEN="\001$(tput setaf 2)\002"
 YELLOW="\001$(tput setaf 3)\002"
@@ -36,63 +31,25 @@ YELLOW="\001$(tput setaf 3)\002"
  WHITE="\001$(tput setaf 7)\002"
  RESET="\001$(tput sgr0)\002"
 
-# Git helper functions (modified from zsh core git plugin)
-function git_current_branch() {
-  local REF="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
-  if [[ -n $REF ]]; then
-    echo -e "${GREEN}$REF "
-  else
-    echo ""
-  fi
-}
-
-function git_prompt_short_sha() {
-  local SHA="$(git rev-parse --short HEAD 2> /dev/null)"
-  if [[ -n $SHA ]]; then
-    echo -e "${WHITE}[${YELLOW}$SHA${WHITE}] "
-  else
-    echo ""
-  fi
-}
-
-function parse_git_dirty() {
-  local STATUS="$(git status --porcelain --ignore-submodules --untracked-files 2> /dev/null | tail -n1)"
-  if [[ -n $STATUS ]]; then
-    echo -e "${RED}(*) "
-  else
-    echo ""
-  fi
-}
-
-# Other helper functions
 function check_ssh() {
   if [[ -n $SSH_CONNECTION ]]; then
-    echo -e "${GREEN}\u@\h "
+    echo -e "[\u@\h] "
   else
     echo ""
   fi
 }
 
 function check_working_dir() {
-  echo -e "${YELLOW}$PWD " | sed "s|$HOME|~|"
+  echo -e "$PWD" | sed "s|$HOME|~|"
 }
 
-# Set command line prompt
-# [\u@\h \W]\
-export PS1="\
-\$(check_ssh)\
-\$(check_working_dir)\
-\$(git_current_branch)\
-\$(git_prompt_short_sha)\
-\$(parse_git_dirty)${RESET}"
+source "/usr/share/git/completion/git-prompt.sh"
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export PROMPT_COMMAND='__git_ps1 "$(check_ssh)$(check_working_dir)" "\\\$ "'
 
 # Load RVM into a shell session *as a function* and load completion
-[[ -s "$XDG_DATA_HOME/rvm/scripts/rvm" ]] && source "$XDG_DATA_HOME/rvm/scripts/rvm"
+[[ -s "$rvm_path/scripts/rvm" ]] && source "$rvm_path/scripts/rvm"
 #[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
-# Add current ruby to prompt
-#PS1="\$($HOME/.rvm/bin/rvm-prompt) $PS1"
-
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#source /usr/share/nvm/init-nvm.sh
 
 [ -f $XDG_CONFIG_HOME/fzf/fzf.bash ] && source $XDG_CONFIG_HOME/fzf/fzf.bash
