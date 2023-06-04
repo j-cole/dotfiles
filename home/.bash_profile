@@ -9,9 +9,11 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # clean up home directory using XDG
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CONAN_USER_HOME="$XDG_CONFIG_HOME/conan"
 export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export GOPATH="$XDG_DATA_HOME/go"
 export HISTFILE="$XDG_DATA_HOME/bash/history"
 export IRBRC="$XDG_CONFIG_HOME/irb/irbrc"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
