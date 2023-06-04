@@ -16,7 +16,7 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
   Plug 'sainnhe/sonokai'
