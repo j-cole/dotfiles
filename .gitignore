@@ -1,19 +1,2 @@
-config/Android Open Source Project
-config/composer
-config/Code
-config/dconf
-config/filezilla
-config/gtk-2.0
-config/htop
-config/pulse
-config/ranger/bookmarks
-config/ranger/commands_full.py
-config/ranger/history
-config/ranger/tagged
-config/Slack
-config/spotify
-config/unity3d
-
-vim/.netrwhist
-vim/autoload/plug.vim
-vim/plugged
+home/.config/*
+home/.local/*
