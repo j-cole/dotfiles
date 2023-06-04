@@ -67,10 +67,13 @@ colorscheme sonokai
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
+
 "Use spaces instead of tabs and set tab size
 set expandtab
-set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 " Prevents delay when pressing esc in insert mode
 set ttimeoutlen=1
@@ -109,7 +112,7 @@ nnoremap <leader>l $
 
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-set textwidth=80
+set textwidth=79
 
 nnoremap Y y$
 
