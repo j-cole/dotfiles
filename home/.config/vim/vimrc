@@ -19,6 +19,7 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
+  Plug 'sainnhe/sonokai'
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
@@ -54,7 +55,12 @@ filetype plugin indent on
 " Force terminal to use 256 colors
 set t_Co=256
 
-colorscheme vividchalk
+let g:sonokai_style = 'default'
+let g:sonokai_enable_italic = 0
+let g:sonokai_disable_italic_comment = 1
+
+colorscheme sonokai
+"colorscheme vividchalk
 "colorscheme wombat256
 "colorscheme desert
 
