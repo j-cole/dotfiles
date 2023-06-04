@@ -23,6 +23,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 /usr/lib/systemd/systemd --user &
 
 systemctl --user import-environment DISPLAY
+# Not sure if XAUTHORITY is required here
+#systemctl --user import-environment DISPLAY XAUTHORITY
 
 #~/bin/dwm_status &
 slstatus &
