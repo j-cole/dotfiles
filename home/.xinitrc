@@ -26,6 +26,14 @@ systemctl --user import-environment DISPLAY
 # Not sure if XAUTHORITY is required here
 #systemctl --user import-environment DISPLAY XAUTHORITY
 
+# copied from /etc/X11/xinit/xinitrd (fixes slow opening of GUI apps)
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
 #~/bin/dwm_status &
 slstatus &
 exec dwm 2> /tmp/dwm.log
