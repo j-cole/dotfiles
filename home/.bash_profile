@@ -22,6 +22,7 @@ export MYSQL_HISTFILE="$XDG_DATA_HOME/mysql_history"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export rvm_path="$XDG_DATA_HOME/rvm"
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # set pulseaudio value for steam game
