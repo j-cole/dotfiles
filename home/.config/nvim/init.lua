@@ -30,6 +30,35 @@ vim.keymap.set("n", "gb", ":ls<CR>:b<Space>")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Plugins
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  {
+    "sainnhe/sonokai",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.sonokai_style = "default"
+      vim.g.sonokai_enable_italic = 0
+      vim.g.sonokai_disable_italic_comment = 1
+    end,
+    config = function()
+      vim.cmd([[colorscheme sonokai]])
+    end
+  }
+})
 
 --[[
 call plug#begin('$XDG_DATA_HOME/vim/plugged')
@@ -40,21 +69,11 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
-  Plug 'sainnhe/sonokai'
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Enable file type detection.
 filetype plugin indent on
-
-let g:sonokai_style = 'default'
-let g:sonokai_enable_italic = 0
-let g:sonokai_disable_italic_comment = 1
-
-colorscheme sonokai
-"colorscheme vividchalk
-"colorscheme wombat256
-"colorscheme desert
 
 " fzf
 nnoremap <C-p> :Files<cr>
