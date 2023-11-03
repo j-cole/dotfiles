@@ -1,3 +1,0 @@
-# ~/.xprofile
-
-xinput --set-prop 'Razer  Razer Abyssus' 'libinput Accel Speed' -1
