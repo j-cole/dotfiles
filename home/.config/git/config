@@ -2,9 +2,9 @@
 	name = Jon Cole
 	email = jon.ed.cole@gmail.com
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
 [merge]
-	tool = gvimdiff
+	tool = nvimdiff
 	ff = only
 [color]
 	ui = true

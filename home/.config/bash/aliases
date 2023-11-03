@@ -9,10 +9,10 @@ alias po='poweroff'
 alias rb='reboot'
 
 # bash
-alias edit-bash-aliases='vim ~/.bash/aliases'
-alias edit-bash-config='vim ~/.bash/config'
-alias edit-bash-env='vim ~/.bash/env'
-alias edit-bashrc='vim ~/.bashrc'
+alias edit-bash-aliases='nvim ~/.bash/aliases'
+alias edit-bash-config='nvim ~/.bash/config'
+alias edit-bash-env='nvim ~/.bash/env'
+alias edit-bashrc='nvim ~/.bashrc'
 
 # git
 alias ga='git add'
@@ -48,4 +48,4 @@ alias batt='cat /sys/class/power_supply/BAT0/capacity'
 alias t='tmux -2'
 
 # vim
-alias gv='gvim --remote-silent'
+alias nv=nvim
