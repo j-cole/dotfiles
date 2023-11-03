@@ -46,6 +46,39 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local builtin = require("telescope.builtin")
+      vim.keymap.set("n", "<leader>fd", function()
+        builtin.git_files({
+          cwd = "~/code/dotfiles",
+          no_ignore = true,
+        })
+      end)
+      vim.keymap.set("n", "<leader>ff", builtin.find_files)
+      vim.keymap.set("n", "<leader>fg", builtin.git_files)
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      local configs = require("nvim-treesitter.configs")
+      configs.setup({
+        ensure_installed = { "c", "cpp", "lua", "rust" },
+        sync_install = false,
+        auto_install = false,
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = { enable = true },
+      })
+    end,
+  },
+  {
     "sainnhe/sonokai",
     lazy = false,
     priority = 1000,
@@ -67,14 +100,9 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-  Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
 call plug#end()
 
-" fzf
-nnoremap <C-p> :Files<cr>
-nnoremap <leader>gd :Files ~/code/dotfiles<cr>
 
 " languageclient-neovim
 let g:LanguageClient_serverCommands = {
