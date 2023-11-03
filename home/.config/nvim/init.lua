@@ -52,10 +52,7 @@ require("lazy").setup({
     config = function()
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>fd", function()
-        builtin.git_files({
-          cwd = "~/code/dotfiles",
-          no_ignore = true,
-        })
+        builtin.git_files({ cwd = "~/code/dotfiles" })
       end)
       vim.keymap.set("n", "<leader>ff", builtin.find_files)
       vim.keymap.set("n", "<leader>fg", builtin.git_files)
