@@ -7,4 +7,4 @@ It is intended to use gnu stow to install these file.
 
 For now use:
 
-stow -t ~ -R home
+stow -v --dotfiles -t ~ -R home
