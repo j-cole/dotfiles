@@ -57,7 +57,8 @@ require("lazy").setup({
     config = function()
       vim.cmd([[colorscheme sonokai]])
     end
-  }
+  },
+  "tpope/vim-fugitive",
 })
 
 --[[
@@ -69,11 +70,7 @@ call plug#begin('$XDG_DATA_HOME/vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'rust-lang/rust.vim'
-  Plug 'tpope/vim-fugitive'
 call plug#end()
-
-" Enable file type detection.
-filetype plugin indent on
 
 " fzf
 nnoremap <C-p> :Files<cr>
